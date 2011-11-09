@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Infrastructure.Querying.Query">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Criteria" Type="Agathas.Storefront.Infrastructure.Querying.Criterion">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.206" Height="0.182" Width="0.774" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SubQueries" Type="Agathas.Storefront.Infrastructure.Querying.Query" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="3.141" />
+        <Point X="3.75" Y="3.797" />
+        <Point X="4.75" Y="3.797" />
+        <Point X="4.75" Y="3.141" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.831" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="QueryOperator" Type="Agathas.Storefront.Infrastructure.Querying.QueryOperator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.277" Y="0.112" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OrderByProperty" Type="Agathas.Storefront.Infrastructure.Querying.OrderByClause">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.206" Y="0.172" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAIEAAACABEAARAAAAQAQAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Querying\Query.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="QueryOperator" />
+      <Property Name="OrderByProperty" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Criteria" />
+      <Property Name="SubQueries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Infrastructure.Querying.Criterion">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="criteriaOperator" Type="Agathas.Storefront.Infrastructure.Querying.CriteriaOperator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.544" Y="0.266" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EBAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAA=</HashCode>
+      <FileName>Querying\Criterion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="criteriaOperator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Infrastructure.Querying.OrderByClause">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQABAAAA=</HashCode>
+      <FileName>Querying\OrderByClause.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Agathas.Storefront.Infrastructure.Querying.CriteriaOperator">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAACAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Querying\CriteriaOperator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Agathas.Storefront.Infrastructure.Querying.QueryOperator">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Querying\QueryOperator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

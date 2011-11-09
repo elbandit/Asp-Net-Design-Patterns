@@ -1,0 +1,47 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage"  %>
+<%@ Import Namespace="Agathas.Storefront.UI.Web.MVC.Helpers" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="<%=Html.Resolve("/Content/Site.css") %>" rel="stylesheet" type="text/css" />                
+    <script type="text/javascript" src="<%=Html.Resolve("/Scripts/jquery-1.4.2.min.js") %>"></script>
+    <script type="text/javascript" src="<%=Html.Resolve("/Scripts/jquery-ui-1.8.1.custom.min.js") %>"></script>        
+    <script type="text/javascript" src="<%=Html.Resolve("/Scripts/jquery-jtemplates.js") %>"></script>
+    <script type="text/javascript" src="<%=Html.Resolve("/Scripts/json2.js") %>"></script>
+    <script type="text/javascript" src="<%=Html.Resolve("/Scripts/agatha-common-scripts.js") %>"></script>
+</head>
+<body>    
+
+<div id="main">    
+    <div id="header">        
+        <span><a href="<%=Html.Resolve("") %>"><img alt="Agatha's Clothing Store" src="<%=Html.Resolve("/Content/Images/Structure/lg_logo.png") %>" border="0" /></a></span>        
+    </div>   
+        
+    <div id="headerSummary">
+         <span class="basket-details">
+        <% if (Request.IsAuthenticated) {%>
+                <%= Html.ActionLink("Your Account", "Detail", "Customer") %> / <%=Html.ActionLink("Log Off", "SignOut", "AccountLogOn")%>
+         <% }
+            else { %>
+                <%= Html.ActionLink("Create Account", "Register", "AccountRegister")%> / <%=Html.ActionLink("Log On", "LogOn", "AccountLogOn")%><br />
+        <%  } %>
+        </span> 
+        <asp:ContentPlaceHolder ID="headerBasketSummary" runat="server">            
+        </asp:ContentPlaceHolder>                      
+    </div>
+    <div class="topBarContainer">          
+        <div id="background">         
+            <div id="navigation">
+            <asp:ContentPlaceHolder ID="MenuContent" runat="server"></asp:ContentPlaceHolder>
+            </div>    
+            
+            <div id="content"><asp:ContentPlaceHolder ID="MainContent" runat="server" /></div>
+            <div style="clear: both;" />
+        </div>  
+    </div>          
+    <% Html.RenderPartial("~/Views/Shared/SiteFooter.ascx"); %> 
+</div>
+
+</body>
+</html>

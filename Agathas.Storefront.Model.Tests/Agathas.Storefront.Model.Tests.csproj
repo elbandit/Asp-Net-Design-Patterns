@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{022C2428-0339-4ADA-B41B-98799295126E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agathas.Storefront.Model.Tests</RootNamespace>
+    <AssemblyName>Agathas.Storefront.Model.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address_Specs\When_creating_a_new_address_with_a_blank_city.cs" />
+    <Compile Include="Address_Specs\When_creating_a_new_address_with_a_blank_country.cs" />
+    <Compile Include="Address_Specs\When_creating_a_new_address_with_a_blank_state.cs" />
+    <Compile Include="Address_Specs\When_creating_a_new_address_with_a_blank_street.cs" />
+    <Compile Include="Address_Specs\When_creating_a_new_address_with_a_blank_zipcode.cs" />
+    <Compile Include="Basket_Item_Specs\When_a_basket_item_is_created_with_a_null_basket.cs" />
+    <Compile Include="Basket_Item_Specs\When_a_basket_item_is_created_with_a_null_product.cs" />
+    <Compile Include="Basket_Specs\When_changing_the_quantity_of_a_product_that_exisits_in_a_basket_to_a_zero_quantity.cs" />
+    <Compile Include="Customer_Specs\When_adding_an_blank_deliveryaddress_name_to_a_customer.cs" />
+    <Compile Include="Customer_Specs\When_adding_an_null_deliveryaddress_to_a_customer.cs" />
+    <Compile Include="Customer_Specs\When_adding_a_valid_address_to_a_customer.cs" />
+    <Compile Include="Customer_Specs\When_changing_the_name_of_a_customer.cs" />
+    <Compile Include="Delivery_Address_Specs\When_changing_the_address_part_of_a_delivery_address_with_an_invalid_value.cs" />
+    <Compile Include="Delivery_Address_Specs\When_changing_the_name_of_a_delivery_address_to_an_invalid_value.cs" />
+    <Compile Include="Delivery_Address_Specs\When_changing_the_address_part_of_a_delivery_address.cs" />
+    <Compile Include="Delivery_Address_Specs\When_changing_the_name_of_a_delivery_address.cs" />
+    <Compile Include="Customer_Specs\When_creating_an_email_address_with_invalid_address.cs" />
+    <Compile Include="Delivery_Address_Specs\When_creating_a_deliveryaddress_with_a_blank_friendly_name.cs" />
+    <Compile Include="Customer_Specs\When_creating_a_new_name_with_invalid_values_for_firstname.cs" />
+    <Compile Include="Customer_Specs\When_creating_a_new_name_with_invalid_values_for_secondname.cs" />
+    <Compile Include="Customer_Specs\When_updating_a_customers_email_address.cs" />
+    <Compile Include="Customer_Specs\When_updating_a_customers_email_address_with_a_null_value.cs" />
+    <Compile Include="Customer_Specs\When_updating_a_customers_name_with_a_null_value.cs" />
+    <Compile Include="Customer_Specs\When_validating_an_empty_email_address.cs" />
+    <Compile Include="Customer_Specs\When_validating_an_invalid_email_address.cs" />
+    <Compile Include="Basket_Specs\When_adding_a_product_to_an_empty_basket.cs" />
+    <Compile Include="Customer_Specs\When_validating_an_valid_email_address.cs" />
+    <Compile Include="Customer_Specs\with_a_valid_customer.cs" />
+    <Compile Include="Delivery_Address_Specs\When_creating_a_deliveryaddress_with_a_null_customer.cs" />
+    <Compile Include="Delivery_Address_Specs\When_creating_a_delivery_address_with_a_null_address.cs" />
+    <Compile Include="Delivery_Address_Specs\with_a_valid_delivery_address.cs" />
+    <Compile Include="Order_Specs\StubDomaubinEventHandlerFactory.cs" />
+    <Compile Include="Order_Specs\When_creating_a_new_order.cs" />
+    <Compile Include="Order_Specs\When_paying_for_an_order_that_has_already_been_paid_for.cs" />
+    <Compile Include="Order_Specs\When_paying_for_an_order_that_has_not_been_paid_for.cs" />
+    <Compile Include="Order_Specs\with_valid_order.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Basket_Specs\When_adding_the_same_product_to_a_basket_twice.cs" />
+    <Compile Include="Basket_Specs\When_a_basket_is_given_a_null_delivery_option.cs" />
+    <Compile Include="Basket_Specs\When_changing_the_quantity_of_a_product_that_exisits_in_a_basket_to_a_positive_amount.cs" />
+    <Compile Include="Basket_Specs\When_not_selecting_a_delivery_option_for_a_basket.cs" />
+    <Compile Include="Basket_Specs\When_removing_an_exisitng_product_from_a_basket.cs" />
+    <Compile Include="Shipping_Specs\When_determining_the_cost_of_delivery_with_a_basket_that_exceeds_the_free_delivery_threshold.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agathas.Storefront.Infrastructure\Agathas.Storefront.Infrastructure.csproj">
+      <Project>{599E0CF8-AFBE-4007-A788-AEDB7F6E66F8}</Project>
+      <Name>Agathas.Storefront.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agathas.Storefront.Model\Agathas.Storefront.Model.csproj">
+      <Project>{7F779F74-6584-48B9-8E1B-89578FE0A274}</Project>
+      <Name>Agathas.Storefront.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

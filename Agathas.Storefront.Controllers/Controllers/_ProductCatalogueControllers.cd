@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Controllers.Controllers.ProductCatalogueBaseController">
+    <Position X="2.5" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProductCatalogueBaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.Controllers.HomeController">
+    <Position X="4.25" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.Controllers.ProductController">
+    <Position X="0.75" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACAw=</HashCode>
+      <FileName>Controllers\ProductController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

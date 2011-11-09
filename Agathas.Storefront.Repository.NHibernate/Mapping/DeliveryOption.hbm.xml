@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Shipping"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="DeliveryOption" table="DeliveryOptions" lazy="false" >
+
+    <id  name="Id" column="DeliveryOptionId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property access="field.camelcase-underscore"  name="FreeDeliveryThreshold">
+      <column name="FreeDeliveryThreshold" sql-type="decimal(18, 2)" not-null="true" />
+    </property>
+
+    <property access="field.camelcase-underscore"  name="Cost">
+      <column name="Cost" sql-type="decimal(18, 2))" not-null="true" />
+    </property>
+
+    <many-to-one access="field.camelcase-underscore" name="ShippingService"
+                    class="ShippingService"
+                    column="ServiceId"
+                    not-null="true"
+                    lazy="false"/>
+  </class>
+</hibernate-mapping>

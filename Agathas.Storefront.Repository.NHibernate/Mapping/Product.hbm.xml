@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Products"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="Product" table="Products" lazy="false" >
+
+    <id  name="Id" column="ProductId" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <many-to-one access="field.camelcase-underscore"  name="Size"
+                     class="ProductSize"
+                     column="SizeId"
+                     not-null="true"
+					  />
+        
+    <many-to-one access="field.camelcase-underscore"  name="Title"
+                     class="ProductTitle"
+                     column="ProductTitleId"
+                     not-null="true"                                          
+                     lazy="false"                   
+					  />   
+  </class>
+
+</hibernate-mapping>

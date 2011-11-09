@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Services.ViewModels.BasketView">
+    <Position X="2.5" Y="0.75" Width="2.25" />
+    <AssociationLine Name="Items" Type="Agathas.Storefront.Services.ViewModels.BasketItemView">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.204" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIAACAAACABAAACAAAAAAAAAAAABAAAAAAQ=</HashCode>
+      <FileName>ViewModels\BasketView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.BasketItemView">
+    <Position X="5.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAACAAAEAAiAAAgAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ViewModels\BasketItemView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.DeliveryOptionView">
+    <Position X="2.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\DeliveryOptionView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

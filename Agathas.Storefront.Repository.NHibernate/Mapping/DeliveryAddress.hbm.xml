@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Customers"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="DeliveryAddress" table="CustomerDeliveryAddresses" lazy="false" >
+
+    <id  name="Id" column="DeliveryId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar(50)" not-null="true" />
+    </property>
+
+    <component name="Address" class="Agathas.Storefront.Model.Address">
+      <property column="AddressLine1" name="AddressLine1"/>
+      <property column="AddressLine2" name="AddressLine2"/>
+      <property column="City" name="City"/>
+      <property column="State" name="State"/>
+      <property column="Country" name="Country"/>
+      <property column="ZipCode" name="ZipCode"/>
+    </component>
+   
+
+    <many-to-one name="Customer"
+                     class="Customer"
+                     column="CustomerId"
+                     not-null="true"
+                     lazy="false"
+					  />
+
+  </class>
+
+</hibernate-mapping>

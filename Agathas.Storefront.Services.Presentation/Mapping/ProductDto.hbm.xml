@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Services.Presentation.Model"
+        assembly="Agathas.Storefront.Services.Presentation.Model">
+
+  <class name="ProductDto" table="Presentation_Products" lazy="false" >
+
+    <id  name="Id" column="ProductId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="ProductTitleId" ></property>
+
+    <property name="Name" column="ProductName" ></property>
+
+    <property name="BrandId" ></property>
+    <property name="BrandName" ></property>
+
+    <property name="Price" ></property>
+
+    <property name="CategoryId" ></property>
+    <property name="CategoryName" ></property>
+
+    <property name="SizeId" ></property>
+    <property name="SizeName" ></property>
+
+    <property name="ColourId" ></property>
+    <property name="ColourName" ></property>
+    
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Shipping"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="ShippingService" table="CourierServices" lazy="false" >
+
+    <id  name="Id" column="CourierServiceId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property access="field.camelcase-underscore"  name="Code">
+      <column name="ServiceCode" sql-type="nvarchar(50)" not-null="true" />
+    </property>
+
+    <property access="field.camelcase-underscore"  name="Description">
+      <column name="ServiceDescription" sql-type="nvarchar(50)" not-null="true" />
+    </property>
+
+    <many-to-one access="field.camelcase-underscore"  name="Courier"
+                    class="Courier"
+                    column="CourierId"
+                    not-null="true"
+                    lazy="false"
+					  />
+  </class>
+</hibernate-mapping>

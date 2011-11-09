@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.BaseProductCataloguePageView">
+    <Position X="3.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\BaseProductCataloguePageView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.ProductDetailView">
+    <Position X="3.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\ProductDetailView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.ProductSearchResultView">
+    <Position X="6" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAEgAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAY=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\ProductSearchResultView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.HomePageView">
+    <Position X="1" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\HomePageView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

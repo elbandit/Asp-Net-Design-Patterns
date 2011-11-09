@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Orders"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="Order" table="Orders" lazy="false" >
+
+    <id name="Id" column="OrderId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property access="field.camelcase-underscore" name="Created">
+      <column name="OrderDate" sql-type="datetime" not-null="true" />
+    </property>
+
+    <property name="ShippingCharge">
+      <column name="ShippingCharge" sql-type="decimal" not-null="true" />
+    </property>
+
+	<many-to-one cascade="all" not-null="true" lazy="false" fetch="join" name="State" column="StateId" access="field.camelcase-underscore" />
+	  	
+    <many-to-one name="ShippingService"
+                  class="Agathas.Storefront.Model.Shipping.ShippingService"
+                  column="ShippingServiceId"
+                  not-null="true"
+					  />
+
+    <component access="field.camelcase-underscore" name="Payment" class="Payment">
+      <property access="field.camelcase-underscore" column="PaymentDate" name="DatePaid"/>
+      <property access="field.camelcase-underscore" column="PaymentTransactionId" name="TransactionId"/>
+      <property access="field.camelcase-underscore" column="PaymentMerchant" name="Merchant"/>
+      <property access="field.camelcase-underscore" column="PaymentAmount" name="Amount"/>
+    </component>
+
+
+    <component name="DeliveryAddress" class="Agathas.Storefront.Model.Address">
+      <property column="DeliveryAddressLine1" name="AddressLine1"/>
+      <property column="DeliveryAddressLine2" name="AddressLine2"/>
+      <property column="DeliveryCity" name="City"/>
+      <property column="DeliveryState" name="State"/>
+      <property column="DeliveryCountry" name="Country"/>
+      <property column="DeliveryZipCode" name="ZipCode"/>
+    </component>
+
+
+    <many-to-one name="Customer"
+                 class="Agathas.Storefront.Model.Customers.Customer"
+                 column="CustomerId"
+                 not-null="true"                     
+					  />
+    
+    <bag name="Items" access="field.camelcase-underscore" inverse="true" cascade="all-delete-orphan" lazy="true" >
+      <key column="OrderId"/>
+      <one-to-many class="OrderItem"></one-to-many>
+    </bag>    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Customers"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="Customer" table="Customers" lazy="false" >
+
+    <id  name="Id" column="CustomerId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="IdentityToken">
+      <column name="AuthenticationToken" sql-type="nvarchar(250)" not-null="true" />
+    </property>
+    
+    <component name="Name" class="Name">
+      <property name="FirstName">
+        <column name="FirstName" sql-type="nvarchar(100)" not-null="true"/>
+      </property>
+      <property name="SecondName">
+        <column name="SecondName" sql-type="nvarchar(100)" not-null="true"/>
+      </property>
+    </component>
+
+    <component name="Email" class="EmailAddress">
+      <property access="field.camelcase-underscore"  name="EmailAddress">
+        <column name="Email" sql-type="nvarchar(100)" not-null="true"/>
+      </property>
+    </component>
+    
+    <bag name="DeliveryAddressBook"  access="field.camelcase-underscore" inverse="true" cascade="all" lazy="true" >
+      <key column="CustomerId"/>
+      <one-to-many class="DeliveryAddress"></one-to-many>
+    </bag>
+
+    <bag name="Orders" inverse="false" cascade="all-delete-orphan" lazy="true" >
+      <key column="CustomerId"/>
+      <one-to-many class="Agathas.Storefront.Model.Orders.Order"></one-to-many>
+    </bag>
+   
+  </class>
+
+</hibernate-mapping>

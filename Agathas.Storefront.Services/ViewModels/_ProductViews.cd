@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Services.ViewModels.ProductView">
+    <Position X="3.25" Y="1.75" Width="1.75" />
+    <AssociationLine Name="Products" Type="Agathas.Storefront.Services.ViewModels.ProductSizeOption">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.369" Y="0.362" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\ProductView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.ProductSummaryView">
+    <Position X="5.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductSummaryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.ProductSizeOption">
+    <Position X="3.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductSizeOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.RefinementGroup">
+    <Position X="7.25" Y="1.75" Width="1.75" />
+    <AssociationLine Name="Refinements" Type="Agathas.Storefront.Services.ViewModels.Refinement">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.409" Y="0.423" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAgAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\RefinementGroup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Refinements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.Refinement">
+    <Position X="7.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Refinement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.CategoryView">
+    <Position X="5.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CategoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Services.ViewModels.OrderView">
+    <Position X="3.5" Y="2.75" Width="2.5" />
+    <AssociationLine Name="Items" Type="Agathas.Storefront.Services.ViewModels.OrderItemView">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.464" Y="0.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAASEAAAAAAAAAwCQAQAgAIAAAAAQ=</HashCode>
+      <FileName>ViewModels\OrderView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.OrderSummaryView">
+    <Position X="7.5" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\OrderSummaryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.OrderItemView">
+    <Position X="7.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAACAAAgAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>ViewModels\OrderItemView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

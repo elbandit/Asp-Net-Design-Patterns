@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Services.ViewModels.CustomerView">
+    <Position X="3.5" Y="1.75" Width="2.5" />
+    <AssociationLine Name="DeliveryAddressBook" Type="Agathas.Storefront.Services.ViewModels.DeliveryAddressView">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.287" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAGgAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CustomerView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DeliveryAddressBook" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Services.ViewModels.DeliveryAddressView">
+    <Position X="8" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAIAAAAAAQAAAIAAAABAAAABAAQAAA=</HashCode>
+      <FileName>ViewModels\DeliveryAddressView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

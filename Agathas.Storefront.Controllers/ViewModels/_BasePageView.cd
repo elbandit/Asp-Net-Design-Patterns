@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.BasePageView">
+    <Position X="3.25" Y="1" Width="2.25" />
+    <AssociationLine Name="BasketSummary" Type="Agathas.Storefront.Controllers.ViewModels.BasketSummaryView">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.745" Y="0.175" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BasePageView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BasketSummary" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.BasketSummaryView">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BasketSummaryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.BasketDetailView">
+    <Position X="3.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\BasketDetailView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.BaseProductCataloguePageView">
+    <Position X="3.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\BaseProductCataloguePageView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.ProductDetailView" Collapsed="true">
+    <Position X="6.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\ProductDetailView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.ProductSearchResultView" Collapsed="true">
+    <Position X="8.75" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAEgAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAY=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\ProductSearchResultView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.ProductCatalogue.HomePageView" Collapsed="true">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\ProductCatalogue\HomePageView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

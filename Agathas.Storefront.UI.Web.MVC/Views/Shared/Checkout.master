@@ -1,0 +1,22 @@
+<%@ Master Language="C#" MasterPageFile="Site.Master" %>
+
+
+<asp:Content  ID="TitleContent" ContentPlaceHolderID="TitleContent" runat="server">
+    <asp:ContentPlaceHolder ID="TitleContent" runat="server">            
+
+    </asp:ContentPlaceHolder>   
+</asp:Content> 
+
+<asp:Content ID="headerBasketSummary" ContentPlaceHolderID="headerBasketSummary" runat="server">
+    
+</asp:Content>
+
+<asp:Content runat="server" ID="Content1" ContentPlaceHolderID="MenuContent">
+ 
+</asp:Content>
+
+<asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">            
+
+    </asp:ContentPlaceHolder>   
+</asp:Content>

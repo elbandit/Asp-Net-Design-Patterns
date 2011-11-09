@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{599E0CF8-AFBE-4007-A788-AEDB7F6E66F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agathas.Storefront.Infrastructure</RootNamespace>
+    <AssemblyName>Agathas.Storefront.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\AspFormsAuthentication.cs" />
+    <Compile Include="Authentication\AspMembershipAuthorisation.cs" />
+    <Compile Include="Authentication\IExternalAuthenticationService.cs" />
+    <Compile Include="Authentication\IFormsAuthentication.cs" />
+    <Compile Include="Authentication\ILocalAuthenticationService.cs" />
+    <Compile Include="Authentication\RpxAuthenticationService.cs" />
+    <Compile Include="Authentication\User.cs" />
+    <Compile Include="CommandHandler\CommandDispatcher.cs" />
+    <Compile Include="CommandHandler\CommandHandlerHelper.cs" />
+    <Compile Include="CommandHandler\ICommand.cs" />
+    <Compile Include="CommandHandler\ICommandHandler.cs" />
+    <Compile Include="Configuration\ApplicationSettingsFactory.cs" />
+    <Compile Include="Configuration\IApplicationSettings.cs" />
+    <Compile Include="Configuration\WebConfigApplicationSettings.cs" />
+    <Compile Include="Container\IContainer.cs" />
+    <Compile Include="CookieStorage\CookieStorageService.cs" />
+    <Compile Include="CookieStorage\ICookieStorageService.cs" />
+    <Compile Include="Domain\BusinessRule.cs" />
+    <Compile Include="Domain\EntityBase.cs" />
+    <Compile Include="Domain\Events\DomainEvents.cs" />
+    <Compile Include="Domain\Events\IDomainEvent.cs" />
+    <Compile Include="Domain\Events\IDomainEventHandler.cs" />
+    <Compile Include="Domain\Events\IDomainEventHandlerFactory.cs" />
+    <Compile Include="Domain\Events\IEnumerableExtensions.cs" />
+    <Compile Include="Domain\Events\StructureMapDomainEventHandlerFactory.cs" />
+    <Compile Include="Domain\IAggregateRoot.cs" />
+    <Compile Include="Domain\IReadOnlyRepository.cs" />
+    <Compile Include="Domain\IRepository.cs" />
+    <Compile Include="Domain\ValueObjectBase.cs" />
+    <Compile Include="Domain\ValueObjectIsInvalidException.cs" />
+    <Compile Include="Email\EmailServiceFactory.cs" />
+    <Compile Include="Email\IEmailService.cs" />
+    <Compile Include="Email\SMTPService.cs" />
+    <Compile Include="Email\TextLoggingEmailService.cs" />
+    <Compile Include="Helpers\PriceHelper.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Log4NetAdapter.cs" />
+    <Compile Include="Logging\LoggingFactory.cs" />
+    <Compile Include="Payments\IPaymentService.cs" />
+    <Compile Include="Payments\OrderItemPaymentRequest.cs" />
+    <Compile Include="Payments\OrderPaymentRequest.cs" />
+    <Compile Include="Payments\PaymentPostData.cs" />
+    <Compile Include="Payments\PayPalPaymentService.cs" />
+    <Compile Include="Payments\TransactionResult.cs" />
+    <Compile Include="Presentation\IPresentationRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Querying\CriteriaOperator.cs" />
+    <Compile Include="Querying\Criterion.cs" />
+    <Compile Include="Querying\LinqExtensions.cs" />
+    <Compile Include="Querying\OrderByClause.cs" />
+    <Compile Include="Querying\PropertyNameHelper.cs" />
+    <Compile Include="Querying\Query.cs" />
+    <Compile Include="Querying\QueryOperator.cs" />
+    <Compile Include="Specification\AndSpecification.cs" />
+    <Compile Include="Specification\CompositeSpecification.cs" />
+    <Compile Include="Specification\ISpecification.cs" />
+    <Compile Include="Specification\NotSpecification.cs" />
+    <Compile Include="Specification\OrSpecification.cs" />
+    <Compile Include="Specification\PredicateBuilder.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWorkRepository.cs" />
+    <Compile Include="Validation\Check.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Payments\_UML.cd" />
+    <None Include="Querying\QueryObjectPattern.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F779F74-6584-48B9-8E1B-89578FE0A274}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agathas.Storefront.Model</RootNamespace>
+    <AssemblyName>Agathas.Storefront.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AddressBusinessRules.cs" />
+    <Compile Include="Basket\BasketBusinessRules.cs" />
+    <Compile Include="Basket\BasketItemBusinessRules.cs" />
+    <Compile Include="Basket\BasketItemFactory.cs" />
+    <Compile Include="Customers\CustomerBusinessRules.cs" />
+    <Compile Include="Customers\DeliveryAddress.cs" />
+    <Compile Include="Basket\Basket.cs" />
+    <Compile Include="Basket\BasketItem.cs" />
+    <Compile Include="Basket\IBasketRepository.cs" />
+    <Compile Include="Categories\ICategoryRepository.cs" />
+    <Compile Include="Customers\EmailAddress.cs" />
+    <Compile Include="Customers\InvalidDeliveryAddressException.cs" />
+    <Compile Include="InvalidAddressException.cs" />
+    <Compile Include="Customers\InvalidCustomerException.cs" />
+    <Compile Include="Customers\InvalidEmailAddressException.cs" />
+    <Compile Include="Customers\Name.cs" />
+    <Compile Include="Customers\InvalidNameException.cs" />
+    <Compile Include="NonNegativeQuantity.cs" />
+    <Compile Include="Orders\CannotAmendOrderException.cs" />
+    <Compile Include="Orders\Events\OrderSubmittedEvent.cs" />
+    <Compile Include="Orders\PaymentAmountDoesNotEqualOrderTotalException.cs" />
+    <Compile Include="Orders\PaymentBusinessRules.cs" />
+    <Compile Include="Orders\PaymentFactory.cs" />
+    <Compile Include="Orders\States\OpenOrderState.cs" />
+    <Compile Include="Orders\OrderAlreadyPaidForException.cs" />
+    <Compile Include="Orders\OrderItemFactory.cs" />
+    <Compile Include="Orders\Payment.cs" />
+    <Compile Include="Orders\States\OrderState.cs" />
+    <Compile Include="Orders\States\OrderStates.cs" />
+    <Compile Include="Orders\States\OrderStatus.cs" />
+    <Compile Include="Orders\States\SubmittedOrderState.cs" />
+    <Compile Include="Products\Brand.cs" />
+    <Compile Include="Categories\Category.cs" />
+    <Compile Include="Customers\Customer.cs" />
+    <Compile Include="Customers\DeliveryAddressBusinessRules.cs" />
+    <Compile Include="Customers\EmailValidationSpecification.cs" />
+    <Compile Include="Customers\ICustomerRepository.cs" />
+    <Compile Include="Orders\OrderItemBusinessRules.cs" />
+    <Compile Include="Products\IProductAttribute.cs" />
+    <Compile Include="Products\ProductIsMadeByBrandSpecification.cs" />
+    <Compile Include="Products\ProductIsInCategorySpecification.cs" />
+    <Compile Include="Products\ProductIsInColourSpecification.cs" />
+    <Compile Include="Products\ProductIsInSizeSpecification.cs" />
+    <Compile Include="Shipping\DeliveryOption.cs" />
+    <Compile Include="Shipping\IDeliveryOption.cs" />
+    <Compile Include="Shipping\IDeliveryOptionRepository.cs" />
+    <Compile Include="Orders\IOrderRepository.cs" />
+    <Compile Include="Orders\States\IOrderState.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Orders\OrderBusinessRules.cs" />
+    <Compile Include="Orders\OrderItem.cs" />
+    <Compile Include="Products\IProductRepository.cs" />
+    <Compile Include="Products\IProductTitleRepository.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductColour.cs" />
+    <Compile Include="Products\ProductSize.cs" />
+    <Compile Include="Products\ProductTitle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shipping\Courier.cs" />
+    <Compile Include="Shipping\NullDeliveryOption.cs" />
+    <Compile Include="Shipping\ShippingService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agathas.Storefront.Infrastructure\Agathas.Storefront.Infrastructure.csproj">
+      <Project>{599E0CF8-AFBE-4007-A788-AEDB7F6E66F8}</Project>
+      <Name>Agathas.Storefront.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Basket\_UML.cd" />
+    <None Include="Customers\_UML.cd" />
+    <None Include="Orders\States\_UML.cd" />
+    <None Include="Orders\_UML.cd" />
+    <None Include="Products\_UML.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

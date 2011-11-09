@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Model.Orders.Order">
+    <Position X="5" Y="1.5" Width="2.5" />
+    <AssociationLine Name="_items" Type="Agathas.Storefront.Model.Orders.OrderItem">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.704" Y="0.216" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Customer" Type="Agathas.Storefront.Model.Customers.Customer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.641" Y="0.352" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DeliveryAddress" Type="Agathas.Storefront.Model.Address">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.433" Y="0.341" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ShippingService" Type="Agathas.Storefront.Model.Shipping.ShippingService">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.558" Y="0.175" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Payment" Type="Agathas.Storefront.Model.Orders.Payment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.735" Y="0.216" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAECAAAEAASACAAEAKLICIAAgBgAwgQAAAAAIAAgAAQ=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_state" />
+      <Property Name="Customer" />
+      <Property Name="DeliveryAddress" />
+      <Property Name="ShippingService" />
+      <Property Name="Payment" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_items" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Agathas.Storefront.Model.Orders.OrderItem">
+    <Position X="9" Y="1.5" Width="2.5" />
+    <AssociationLine Name="Product" Type="Agathas.Storefront.Model.Products.Product">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.627" Y="0.443" Height="0.182" Width="1.191" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgECAgACAQCAACAAAAAAAAAAgAAAAAAAAIAAAAAQAAA=</HashCode>
+      <FileName>Orders\OrderItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Model.Products.Product" Collapsed="true">
+    <Position X="9" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAYAAgEAAAAAAAAQAAAAAAAAAAAAAABIBCAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Agathas.Storefront.Model.Customers.Customer" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIECAHgAACCAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAA=</HashCode>
+      <FileName>Customers\Customer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Agathas.Storefront.Model.Address" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAIAAAAAAAAAAIAAAABAAAABAAQAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Model.Shipping.ShippingService" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAFAAAgAAAAAAAAAAAAAAgAAAAgAAA=</HashCode>
+      <FileName>Shipping\ShippingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agathas.Storefront.Model.Orders.Payment">
+    <Position X="0.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAACAAAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Agathas.Storefront.Model.Orders.States.IOrderState">
+    <Position X="5" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Orders\States\IOrderState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

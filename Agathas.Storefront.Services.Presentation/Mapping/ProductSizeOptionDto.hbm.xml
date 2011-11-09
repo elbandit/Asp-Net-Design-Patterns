@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Services.Presentation.Model"
+        assembly="Agathas.Storefront.Services.Presentation.Model">
+
+  <class name="ProductSizeOptionDto" table="Presentation_ProductSizeOption" lazy="false" >
+
+    <id  name="Id" column="ProductId"  type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+
+    <property name="SizeName"></property>
+
+  </class>
+
+</hibernate-mapping>

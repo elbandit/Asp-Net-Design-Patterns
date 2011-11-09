@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.Account.AccountView">
+    <Position X="1.5" Y="2" Width="2.75" />
+    <AssociationLine Name="CallBackSettings" Type="Agathas.Storefront.Controllers.ViewModels.Account.CallBackSettings">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.204" Y="0.237" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAgIAAAAAA=</HashCode>
+      <FileName>ViewModels\Account\AccountView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CallBackSettings" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agathas.Storefront.Controllers.ViewModels.Account.CallBackSettings">
+    <Position X="7" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\Account\CallBackSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

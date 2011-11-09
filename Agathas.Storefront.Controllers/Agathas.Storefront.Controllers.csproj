@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B611DD6-532F-48E6-BDBF-DD1ED34006BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agathas.Storefront.Controllers</RootNamespace>
+    <AssemblyName>Agathas.Storefront.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.0.0.155, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.5.3.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionArguments\ActionArgumentKey.cs" />
+    <Compile Include="ActionArguments\HttpRequestActionArguments.cs" />
+    <Compile Include="ActionArguments\IActionArguments.cs" />
+    <Compile Include="AutoMapperBootStrapper.cs" />
+    <Compile Include="BasketMapper.cs" />
+    <Compile Include="Controllers\AccountLogOnController.cs" />
+    <Compile Include="Controllers\AccountRegisterController.cs" />
+    <Compile Include="Controllers\BaseAccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ProductCatalogueBaseController.cs" />
+    <Compile Include="Controllers\BasketController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="CookieDataKeys.cs" />
+    <Compile Include="FormDataKeys.cs" />
+    <Compile Include="IoCControllerFactory.cs" />
+    <Compile Include="JsonDTOs\JsonBasketItemUpdateRequest.cs" />
+    <Compile Include="JsonDTOs\JsonBasketQtyUpdateRequest.cs" />
+    <Compile Include="JsonDTOs\JsonDtoMapper.cs" />
+    <Compile Include="JsonDTOs\JsonModelBinder.cs" />
+    <Compile Include="JsonDTOs\JsonProductSearchRequest.cs" />
+    <Compile Include="JsonDTOs\JsonRefinementGroup.cs" />
+    <Compile Include="OrderMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Account\AccountView.cs" />
+    <Compile Include="ViewModels\Account\CallBackSettings.cs" />
+    <Compile Include="ViewModels\BasketSummaryView.cs" />
+    <Compile Include="ViewModels\ProductCatalogue\BasketDetailView.cs" />
+    <Compile Include="ViewModels\Checkout\OrderConfirmationView.cs" />
+    <Compile Include="ViewModels\CustomerAccount\BaseCustomerAccountView.cs" />
+    <Compile Include="ViewModels\BasePageView.cs" />
+    <Compile Include="ViewModels\CustomerAccount\CustomerDeliveryAddressView.cs" />
+    <Compile Include="ViewModels\CustomerAccount\CustomerOrderView.cs" />
+    <Compile Include="ViewModels\ProductCatalogue\BaseProductCataloguePageView.cs" />
+    <Compile Include="ViewModels\CustomerAccount\CustomerDetailView.cs" />
+    <Compile Include="ViewModels\CustomerAccount\CustomersOrderSummaryView.cs" />
+    <Compile Include="ViewModels\ProductCatalogue\HomePageView.cs" />
+    <Compile Include="ViewModels\ProductCatalogue\ProductDetailView.cs" />
+    <Compile Include="ViewModels\ProductCatalogue\ProductSearchResultView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agathas.Storefront.Infrastructure\Agathas.Storefront.Infrastructure.csproj">
+      <Project>{599E0CF8-AFBE-4007-A788-AEDB7F6E66F8}</Project>
+      <Name>Agathas.Storefront.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agathas.Storefront.Model\Agathas.Storefront.Model.csproj">
+      <Project>{7F779F74-6584-48B9-8E1B-89578FE0A274}</Project>
+      <Name>Agathas.Storefront.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agathas.Storefront.Services.Presentation.Model\Agathas.Storefront.Services.Presentation.Model.csproj">
+      <Project>{68A1AE1D-7B05-4F3F-AEB0-CC7180B485E4}</Project>
+      <Name>Agathas.Storefront.Services.Presentation.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agathas.Storefront.Services\Agathas.Storefront.Services.csproj">
+      <Project>{4827A280-FAF4-40B7-8999-D33E39D8E12A}</Project>
+      <Name>Agathas.Storefront.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\_AccountController.cd" />
+    <None Include="Controllers\_BasketController.cd" />
+    <None Include="Controllers\_ProductCatalogueControllers.cd" />
+    <None Include="ViewModels\Account\_AccountView.cd" />
+    <None Include="ViewModels\CustomerAccount\_Customer_Account_Views.cd" />
+    <None Include="ViewModels\CustomerAccount\_Customer_Account_With_Orders_Views.cd" />
+    <None Include="ViewModels\ProductCatalogue\_Product_Catalogue_Views.cd" />
+    <None Include="ViewModels\_BasePageView.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

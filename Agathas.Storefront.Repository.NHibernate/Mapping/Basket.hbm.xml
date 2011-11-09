@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Agathas.Storefront.Model.Basket"
+        assembly="Agathas.Storefront.Model">
+
+  <class name="Basket" table="Baskets" lazy="false" >
+
+    <id  name="Id" column="BasketId" type="guid">
+      <generator class="guid" />
+    </id>
+
+    <bag name="Items" access="field.camelcase-underscore" inverse="true" cascade="all-delete-orphan" lazy="true" >
+      <key column="BasketId"/>
+      <one-to-many class="BasketItem"></one-to-many>
+    </bag>
+
+    <many-to-one access="field.camelcase-underscore" name="DeliveryOption"
+                 class="Agathas.Storefront.Model.Shipping.DeliveryOption"
+                 column="DeliveryOptionId"
+                 not-null="true"/>
+  </class>
+
+</hibernate-mapping>
